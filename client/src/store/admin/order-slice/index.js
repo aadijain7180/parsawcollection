@@ -10,7 +10,7 @@ export const getAllOrdersForAdmin = createAsyncThunk(
   "/order/getAllOrdersForAdmin",
   async () => {
     const response = await axios.get(
-      `http://mern-api.onrender.com/api/admin/orders/get`
+      `http://parsawcollection.onrender.com/api/admin/orders/get`
     );
 
     return response.data;
@@ -21,7 +21,7 @@ export const getOrderDetailsForAdmin = createAsyncThunk(
   "/order/getOrderDetailsForAdmin",
   async (id) => {
     const response = await axios.get(
-      `http://mern-api.onrender.com/api/admin/orders/details/${id}`
+      `http://parsawcollection.onrender.com/api/admin/orders/details/${id}`
     );
 
     return response.data;
@@ -32,7 +32,7 @@ export const updateOrderStatus = createAsyncThunk(
   "/order/updateOrderStatus",
   async ({ id, orderStatus }) => {
     const response = await axios.put(
-      `http://mern-api.onrender.com/api/admin/orders/update/${id}`,
+      `http://parsawcollection.onrender.com/api/admin/orders/update/${id}`,
       {
         orderStatus,
       }
